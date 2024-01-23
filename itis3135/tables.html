@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan Chen's Rare Capybara || ITIS 3135 || Tables</title>
+  <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+  <header>
+    <h1> Ryan Chen's Rare Capybara || ITIS 3135 </h1>
+    <nav>
+      <a href="./">Home</a>
+      ||
+      <a href="introduction.html">Introduction</a>
+      ||
+      <a href="contract.html">Contract</a>
+      ||
+      <a href="tables.html">Tables</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Tables</h2>
+    <h3>My Tabular Data</h3>
+    <ol>
+        <li>Ryan Chen rchen17@rarecapybara.com</li>
+        <li>Sara Chidouin schidouin52@rarecapybara.com</li>
+        <li>Joe Tazuna jtazuna25@rarecapybara.com</li>
+        <li>Sou Hiyori shiyori63@rarecapybara.com</li>
+        <li>Kai Satou ksatou37@rarecapybara.com</li>
+        <li>Gin Ibushi gibushi86@rarecapybara.com</li>
+        <li>Kanna Kizuchi kkizuchi14@rarecapybara.com</li>
+    </ol>
+    <h3>Employee Data in Simple Table</h3>
+    <table>
+        <tr>
+            <th id="col1" headers="blank">Name</th>
+            <th id="col2" headers="blank">Email</th>
+            <th id="col3" headers="blank">Years of Service</th>
+        </tr>
+        <tr>
+            <td>Ryan Chen</td>
+            <td>rchen17@rarecapybara.com</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Sara Chidouin</td>
+            <td>schidouin52@rarecapybara.com</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>Joe Tazuna</td>
+            <td>jtazuna25@rarecapybara.com</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>Sou Hiyori</td>
+            <td>rchen17@rarecapybara.com</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Kai Satou</td>
+            <td>ksatou37@rarecapybara.com</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Gin Ibushi</td>
+            <td>gibushi86@rarecapybara.com</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Kanna Kizuchi</td>
+            <td>kkizuchi14@rarecapybara.com</td>
+            <td>16</td>
+        </tr>
+    </table>
+    <h3>Employee Data in Complex Table</h3>
+    <figure>
+        <table>
+            <tr>
+                <th id="col1" headers="blank">Category</th>
+                <th id="col2" headers="blank">Name</th>
+                <th id="col3" headers="blank">Email</th>
+                <th id="col4" headers="blank">Years of Service</th>
+                <th id="col5" headers="blank">Salary</th>
+            </tr>
+            <tr>
+                <td rowspan="1">Owner</td>
+                <td headers="Owner Name">Ryan Chen</td>
+                <td headers="Owner Email">rchen17@rarecapybara.com</td>
+                <td headers="Owner Years">22</td>
+                <td headers="Owner Salary">$22,000</td>
+            </tr>
+            <tr>
+                <td rowspan="2" scope="rowgroup">Chairmen</td>
+                <td headers="Chairmen Name">Sara Chidouin</td>
+                <td headers="Chairmen Email">schidouin52@rarecapybara.com</td>
+                <td headers="Chairmen Years">18</td>
+                <td headers="Chairmen Salary">$18,000</td>
+            </tr>
+            <tr>
+                <td headers="Chairmen Name">Joe Tazuna</td>
+                <td headers="Chairmen Email">jtazuna25@rarecapybara.com</td>
+                <td headers="Chairmen Years">18</td>
+                <td headers="Chairmen Salary">$18,000</td>
+            </tr>
+            <tr>
+                <td rowspan="2" scope="rowgroup">Managers</td>
+                <td headers="Managers Name">Sou Hiyori</td>
+                <td headers="Managers Email">rchen17@rarecapybara.com</td>
+                <td headers="Managers Years">20</td>
+                <td headers="Managers Salary">$20,000</td>
+            </tr>
+            <tr>
+                <td headers="Managers Name">Kai Satou</td>
+                <td headers="Managers Email">ksatou37@rarecapybara.com</td>
+                <td headers="Managers Years">21</td>
+                <td headers="Managers Salary">$21,000</td>
+            </tr>
+            <tr>
+                <td rowspan="2" scope="rowgroup">Workers</td>
+                <td headers="Workers Name">Gin Ibushi</td>
+                <td headers="Workers Email">gibushi86@rarecapybara.com</td>
+                <td headers="Workers Years">17</td>
+                <td headers="Workers Salary">$17,000</td>
+            </tr>
+            <tr>
+                <td headers="Workers Name">Kanna Kizuchi</td>
+                <td headers="Workers Email">kkizuchi14@rarecapybara.com</td>
+                <td headers="Workers Years">16</td>
+                <td headers="Workers Salary">$16,000</td>
+            </tr>
+            <tr>
+                <td colspan="3">Total:</td>
+                <td>132</td>
+                <td>$132,000</td>
+            </tr>
+        </table>
+    </figure>
+    <figcaption><i>Monthly Salary of Each Worker</i></figcaption>
+    <p></p>
+    <style>
+        figure{
+            margin-left: auto;
+            margin-right: auto;
+            width: 1000%;
+        }
+
+        figcaption {
+            text-align: center;
+        }
+
+        table, th, td {
+            border: 1px solid lightcoral;
+        }
+
+        table tr:nth-child(odd) {
+            background-color: chocolate;
+            color: #fff; 
+        }
+
+        table tr:nth-child(even) {
+            background-color: indianred;
+            color: #fff; 
+        }
+    </style>
+  </main>
+  <footer>
+    <nav>
+      <a href="https://webpages.charlotte.edu/rchen17/">Charlotte.edu</a>
+      ||
+      <a href="https://github.com/Ryan-Chen-GitHub/Ryan-Chen-GitHub.github.io">Github</a>
+      ||
+      <a href="https://ryan-chen-github.github.io/itis3135/">Github.io</a>
+      ||
+      <a href="https://www.freecodecamp.org/RyanChen">freeCodeCamp</a>
+      ||
+      <a href="https://www.codecademy.com/profiles/RyanChenUNCC">Codecademy</a>
+      ||
+      <a href="https://www.linkedin.com/in/ryan-chen-9bb774250/">LinkedIn</a>
+    </nav>
+    <p>Page Built by <a href="ryanenterprise.online/">Ryan Enterprise</a> &copy;2023</p>
+
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+      <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+    </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+      <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+    </a>
+  </footer>
+</body>
+<script>
+  document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+  document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
+</html>
