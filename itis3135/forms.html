@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan Chen's Rare Capybara || ITIS 3135 || Forms</title>
+  <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+  <header>
+    <h1> Ryan Chen's Rare Capybara || ITIS 3135 </h1>
+    <nav>
+      <a href="./">Forms</a>
+      ||
+      <a href="introduction.html">Introduction</a>
+      ||
+      <a href="contract.html">Contract</a>
+      ||
+      <a href="tables.html">Tables</a>
+      ||
+      <a href="forms.html">Forms</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Forms</h2>
+    <p text-align="center">Please fill out this form! i'm sure it does something.</p>
+    <form action="#">
+        <fieldset>
+            <legend>Enter your basic information</legend>
+            <label for="first-name">First Name:<input id="first-name" name="first-name" type="text" required /></label>
+            <label for="last-name">Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+            <label for="email">Email: <input id="email" name="email" type="email" required /></label>
+            <label for="new-password">Phone Number: <input id="phone-number" name="phone-number" type="phone-number" required /></label>
+        </fieldset>
+        <fieldset>
+            <legend>Pick a random option!</legend>
+            <label><input type="radio" class="inline">To the one who left it all behind</label>
+            <label><input type="radio" class="inline">Nah, I'd win</label>
+        </fieldset>
+        <fieldset>
+            <legend>What game genres do you like?</legend>
+            <label><input type="checkbox" class="inline">Horror</label>
+            <label><input type="checkbox" class="inline">Social Deduction</label>
+            <label><input type="checkbox" class="inline">Farming Simulator</label>
+        </fieldset>
+        <fieldset>
+            <legend>What device do you play on most?</legend>
+            <label for="referrer"">Please select one:
+                <select id="referrer" name="referrer">
+                  <option value=""">(select one)</option>
+                  <option value="1">Desktop</option>
+                  <option value="2">Laptop</option>
+                  <option value="3">Mobile</option>
+                  <option value="4">Other</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <input type="reset">
+            <input type="submit">
+        </fieldset>
+    </form>
+    <style>
+        label {
+            display: block;
+            margin: 0.5rem 0;
+            color: whitesmoke;
+        }
+
+        fieldset {
+            color: rgb(89, 128, 167);
+        }
+
+        input,
+            textarea,
+            select {
+            margin: 10px 0 0 0;
+            width: 100%;
+            min-height: 2em;
+        }
+
+        .inline {
+            width: unset;
+            margin: 0 0.5em 0 0;
+            vertical-align: middle;
+        }
+    </style>
+  </main>
+  <footer>
+    <nav>
+      <a href="https://webpages.charlotte.edu/rchen17/">Charlotte.edu</a>
+      ||
+      <a href="https://github.com/Ryan-Chen-GitHub/Ryan-Chen-GitHub.github.io">Github</a>
+      ||
+      <a href="https://ryan-chen-github.github.io/itis3135/">Github.io</a>
+      ||
+      <a href="https://www.freecodecamp.org/RyanChen">freeCodeCamp</a>
+      ||
+      <a href="https://www.codecademy.com/profiles/RyanChenUNCC">Codecademy</a>
+      ||
+      <a href="https://www.linkedin.com/in/ryan-chen-9bb774250/">LinkedIn</a>
+    </nav>
+    <p>Page Built by <a href="ryanenterprise.online/">Ryan Enterprise</a> &copy;2023</p>
+
+    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+      <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+    </a>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+      <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+    </a>
+  </footer>
+</body>
+<script>
+  document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+  document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
+</html>
