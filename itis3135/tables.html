@@ -5,6 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryan Chen's Rare Capybara || ITIS 3135 || Tables</title>
   <link rel="stylesheet" href="styles/default.css">
+  <style>
+    figure{
+        margin-left: auto;
+        margin-right: auto;
+        width: 1000%;
+    }
+
+    figcaption {
+        text-align: center;
+    }
+
+    table, th, td {
+        border: 1px solid #172e35;
+    }
+
+    table tr:nth-child(odd) {
+        background-color: #1E212B;
+        color: #fff; 
+    }
+
+    table tr:nth-child(even) {
+        background-color: #1e294f;
+        color: #fff; 
+    }
+</style>
 </head>
 <body>
   <header>
@@ -139,33 +164,7 @@
             </tr>
         </table>
     </figure>
-    <figcaption><i>Monthly Salary of Each Worker</i></figcaption>
-    <br>
-    <style>
-        figure{
-            margin-left: auto;
-            margin-right: auto;
-            width: 1000%;
-        }
-
-        figcaption {
-            text-align: center;
-        }
-
-        table, th, td {
-            border: 1px solid #172e35;
-        }
-
-        table tr:nth-child(odd) {
-            background-color: #1E212B;
-            color: #fff; 
-        }
-
-        table tr:nth-child(even) {
-            background-color: #1e294f;
-            color: #fff; 
-        }
-    </style>
+    <p><i>Monthly Salary of Each Worker</i></p>
   </main>
   <footer>
     <nav>
@@ -189,10 +188,10 @@
     <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
       <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
     </a>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+      </script>
   </footer>
 </body>
-<script>
-  document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-  document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-</script>
 </html>
