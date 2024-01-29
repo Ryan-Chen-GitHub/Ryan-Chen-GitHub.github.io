@@ -5,6 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryan Chen's Rare Capybara || ITIS 3135 || Forms</title>
   <link rel="stylesheet" href="styles/default.css">
+  <style>
+    p {
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin: 0.5rem 0;
+        color: whitesmoke;
+    }
+
+    fieldset {
+        color: #1e212b;
+    }
+
+    input,
+        textarea,
+        select {
+        margin: 10px 0 0 0;
+        width: 100%;
+        min-height: 2em;
+    }
+
+    .inline {
+        width: unset;
+        margin: 0 0.5em 0 0;
+        vertical-align: middle;
+    }
+</style>
 </head>
 <body>
   <header>
@@ -23,14 +51,14 @@
   </header>
   <main>
     <h2>Forms</h2>
-    <p text-align="center">Please fill out this form! i'm sure it does something.</p>
+    <p>Please fill out this form! i'm sure it does something.</p>
     <form action="#">
         <fieldset>
             <legend>Enter your basic information</legend>
-            <label for="first-name">First Name:<input id="first-name" name="first-name" type="text" required /></label>
-            <label for="last-name">Last Name: <input id="last-name" name="last-name" type="text" required /></label>
-            <label for="email">Email: <input id="email" name="email" type="email" required /></label>
-            <label for="new-password">Phone Number: <input id="phone-number" name="phone-number" type="phone-number" required /></label>
+            <label for="first-name">First Name:<input id="first-name" name="first-name" type="text" required ></label>
+            <label for="last-name">Last Name: <input id="last-name" name="last-name" type="text" required ></label>
+            <label for="email">Email: <input id="email" name="email" type="email" required ></label>
+            <label for="phone-number">Phone Number: <input id="phone-number" name="phone-number" type="phone-number"></label>
         </fieldset>
         <fieldset>
             <legend>Pick a random option!</legend>
@@ -60,31 +88,6 @@
             <input type="submit">
         </fieldset>
     </form>
-    <style>
-        label {
-            display: block;
-            margin: 0.5rem 0;
-            color: whitesmoke;
-        }
-
-        fieldset {
-            color: #1e212b;
-        }
-
-        input,
-            textarea,
-            select {
-            margin: 10px 0 0 0;
-            width: 100%;
-            min-height: 2em;
-        }
-
-        .inline {
-            width: unset;
-            margin: 0 0.5em 0 0;
-            vertical-align: middle;
-        }
-    </style>
   </main>
   <footer>
     <nav>
@@ -109,10 +112,10 @@
     <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
       <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
     </a> 
+    <script>
+      document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+      document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
   </footer>
 </body>
-<script>
-  document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
-  document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
-</script>
 </html>
