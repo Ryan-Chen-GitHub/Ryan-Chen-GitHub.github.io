@@ -1,17 +1,28 @@
+
+header {
+    background-color: #1e212b;
+    margin-top: -22px;
+    margin-left: -7px;
+    margin-right: -8px;
+    margin-bottom: -10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
 body {
-    background-color: lightskyblue;
-    color: chocolate;
+    background-color: #6a7b76;
+    color: #E0F0F5;
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 a {
-    color: brown;
+    color: #FFDD4A;
     text-decoration: none;
 }
 
 a:hover {
-    color: darkblue;
+    color: #FE9000;
 }
 
 main {
