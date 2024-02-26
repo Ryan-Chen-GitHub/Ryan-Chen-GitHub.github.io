@@ -31,7 +31,7 @@ function greetUser(name, mood) {
 }
 
 function alertFavoritePolygon(number) {
-    var polygons = ["", "digon", "triangle", "quadrilateral", "pentagon", "hexagon", "heptagon", "octagon", "nonagon", "decagon"];
+    var polygons = ["", "", "digon", "triangle", "quadrilateral", "pentagon", "hexagon", "heptagon", "octagon", "nonagon", "decagon"];
     if (number >= 0 && number <= 10) {
         alert("Your favorite polygon is: " + polygons[number]);
     } else {
