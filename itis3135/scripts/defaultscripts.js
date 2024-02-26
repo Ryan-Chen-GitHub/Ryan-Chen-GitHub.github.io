@@ -22,9 +22,7 @@ document.getElementById("userForm").addEventListener("submit", function(event) {
     var favoriteNumber = Math.abs(Math.round(parseFloat(document.getElementById("favoriteNumber").value)));
     greetUser(userName, mood);
     alertFavoritePolygon(favoriteNumber);
-    whatsMyCapybaraName(userName);
-    howManyCapybaraRent(favoriteNumber);
-    capybaraFeelings(mood);
+
 });
 
 function greetUser(name, mood) {
@@ -50,15 +48,18 @@ function advertiseCapybaraRenting() {
     alert("Rent a capybara today! They're cuddly, friendly, and great companions!");
 }
 
-function whatsMyCapybaraName(name) {
+function whatsMyCapybaraName() {
+    var name = document.getElementById("userName").value;
     alert("Your name is Capy" + name + "!");
 }
 
 function howManyCapybaraRent(number) {
+    var number = document.getElementById("favoriteNumber").value;
     alert("You should rent " + number + " Capybara(s)");
 }
 
 function capybaraFeelings(mood) {
+    var mood = document.getElementById("mood").value;
     alert("The Capybaras are also feeling " + mood);
 }
 
