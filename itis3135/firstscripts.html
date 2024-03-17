@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First Scripts</title>
-    <link rel="stylesheet" href="styles/default.css">
-    <script src="scripts/defaultscripts.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <div data-include="components/header.html"></div>
-      <script src="scripts/HTMLInclude.js"></script>
-    </header>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Scripts</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <script src="scripts/defaultscripts.js" defer></script>
 </head>
 <body>
-    <main>
+  <header>
+    <div data-include="components/header.html"></div>
+    <script src="scripts/HTMLInclude.js"></script>
+  </header>
+  <main>
         <h1>Welcome to First Scripts</h1>
-        <h3 id="datetime"></h3>
+        <h3 id="datetime">Filler text</h3>
         <form id="userForm">
             <label for="userName">Your Name:</label><br>
             <input type="text" id="userName" name="userName"><br><br>
@@ -26,7 +23,7 @@
             <input type="number" id="favoriteNumber" name="favoriteNumber" min="0" max="10"><br><br>
             <button type="submit">Submit</button><br><br>
         </form>
-        <h3 id="greeting"></h3>
+        <h3 id="greeting">Functions</h3>
         <button onclick="getPolygon()">Show Favorite Polygon</button>
         <button onclick="advertiseCapybaraRenting()">Rent a Capybara</button>
         <button onclick="whatsMyCapybaraName()">What's my Capybara name?</button>
