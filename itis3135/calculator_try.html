@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Chen's Rare Capybara || ITIS 3135 || Introduction</title>
+    <link rel="stylesheet" href="styles/default.css">
+</head>
+<style>
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #747171;
+}
+</style>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+        <script src="scripts/calculator_try.js"></script>
+    </header>
+    <main>
+      <h2>Calculator</h2>
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+          <button onclick="appendNumber(7)">7</button>
+          <button onclick="appendNumber(8)">8</button>
+          <button onclick="appendNumber(9)">9</button>
+          <button onclick="appendOperator('+')">+</button>
+          <button onclick="appendNumber(4)">4</button>
+          <button onclick="appendNumber(5)">5</button>
+          <button onclick="appendNumber(6)">6</button>
+          <button onclick="appendOperator('-')">-</button>
+          <button onclick="appendNumber(1)">1</button>
+          <button onclick="appendNumber(2)">2</button>
+          <button onclick="appendNumber(3)">3</button>
+          <button onclick="appendOperator('*')">*</button>
+          <button onclick="clearDisplay()">C</button>
+          <button onclick="appendNumber(0)">0</button>
+          <button onclick="calculate()">=</button>
+          <button onclick="appendOperator('/')">/</button>
+        </div>
+    <h3>Since my calculator attempt is half-decent, I decided not to follow the freeCodeCamp guide</h3>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/HTMLInclude.js"></script>
+      </footer>
+</body>
+
+</html>

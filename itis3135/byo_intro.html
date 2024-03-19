@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan Chen's Rare Capybara || ITIS 3135 || BYO Intro</title>
+  <link rel="stylesheet" href="styles/default.css">
+</head>
+<body>
+  <header>
+        <div data-include="components/header.html"></div>
+        <script src="scripts/HTMLInclude.js"></script>
+  </header>
+  <main>
+    <h2>BYO Intro</h2>
+    <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+    <form id="surveyForm" action="#" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="Ryan" required><br><br>
+        
+        <label for="mascot">Mascot:</label><br>
+        <input type="text" id="mascot" name="mascot" value="Capybara" required><br><br>
+        
+        <label for="image">Image:</label><br>
+        <input type="file" id="image" name="image" accept="image/png, image/jpeg"><br><br>
+        
+        <label for="imageCaption">Image Caption:</label><br>
+        <input type="text" id="imageCaption" value="My Mom and I" name="imageCaption" required><br><br>
+        
+        <label for="personalBackground">Personal Background:</label><br>
+        <input id="personalBackground" name="personalBackground" value="Born in Charlotte" required><br><br>
+        
+        <label for="professionalBackground">Professional Background:</label><br>
+        <input id="professionalBackground" name="professionalBackground" value="I am a TA at UNCC" required><br><br>
+        
+        <label for="academicBackground">Academic Background:</label><br>
+        <input id="academicBackground" name="academicBackground" required value="I am a Junior at UNCC"><br><br>
+        
+        <label for="webDevelopmentBackground">Background in Web Development:</label><br>
+        <input id="webDevelopmentBackground" name="webDevelopmentBackground" required value="I am taking Web Dev"><br><br>
+        
+        <label for="primaryPlatform">Primary Computer Platform:</label><br>
+        <input type="text" id="primaryPlatform" name="primaryPlatform" required value="Desktop and Macbook"><br><br>
+        
+        <label>Courses currently taking:</label><br>
+        <div id="coursesContainer">
+            <div class="courseEntry">
+                <input type="text" class="course" name="courses[]" required value="ITIS 3135 - Web Dev">
+                <button type="button" onclick="deleteCourse(this)">Delete</button>
+            </div>
+        </div>
+        <button type="button" onclick="addCourse()">Add Course</button><br><br>
+        
+        <label for="funnyThing">Funny thing?</label><br>
+        <input type="text" id="funnyThing" name="funnyThing" value="No"><br><br>
+        
+        <label for="anythingElse">Anything else?</label><br>
+        <input id="anythingElse" name="anythingElse" value="NA"><br><br>
+        
+        <input type="checkbox" id="agreement" required>
+        <label for="agreement">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.</label><br><br>
+        
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+      <br>
+</main>
+  <footer>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/survey.js"></script>
+  </footer>
+</body>
+</html>
