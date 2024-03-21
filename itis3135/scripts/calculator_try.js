@@ -1,3 +1,33 @@
+window.onload = function() {
+
+  const buttons = document.querySelectorAll('.buttons button');
+
+  buttons.forEach(button => {
+      button.addEventListener('click', handleClick);
+  });
+
+  function handleClick() {
+    const value = this.textContent;
+    switch (value) {
+      case 'C':
+        clearDisplay();
+        break;
+      case '=':
+        calculate();
+        break;
+      case '+':
+      case '-':
+      case '*':
+      case '/':
+        appendOperator(value);
+        break;
+      default:
+        appendNumber(value);
+        break;
+    }
+  }
+};
+
 let displayValue = '';
 
 function appendNumber(number) {
