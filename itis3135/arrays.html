@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan Chen's Rare Capybara || ITIS 3135 || Forms</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <style>
+    p {
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin: 0.5rem 0;
+        color: whitesmoke;
+    }
+
+    fieldset {
+        color: #1e212b;
+    }
+
+    input,
+        textarea,
+        select {
+        margin: 10px 0 0 0;
+        width: 100%;
+        min-height: 2em;
+    }
+
+    .inline {
+        width: unset;
+        margin: 0 0.5em 0 0;
+        vertical-align: middle;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+    <script src="scripts/HTMLInclude.js"></script>
+  </header>
+  <main>
+    <h1>Employee Salary Management</h1>
+    <label for="name">Employee Name:</label>
+    <input type="text" id="name">
+    <label for="salary">Salary:</label>
+    <input type="text" id="salary">
+    <button onclick="addSalary()">Add Salary</button>
+    <br><br>
+    <label for="modify-name">Select Employee:</label>
+    <select id="modify-name"></select>
+    <label for="new-salary">New Salary:</label>
+    <input type="text" id="new-salary">
+    <button onclick="modifySalary()">Modify Salary</button>
+    <br><br>
+    <button onclick="displayResults(); displaySalary();">Display Results</button>
+    <div id="results"></div>
+    <br><br>
+    <table id="results_table" border="1">
+        <tr><th>Name</th><th>Salary</th></tr>
+    </table>
+  </main>
+  <footer>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/arrays.js"></script>
+  </footer>
+</body>
+</html>
