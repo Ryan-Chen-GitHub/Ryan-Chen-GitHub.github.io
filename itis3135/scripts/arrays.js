@@ -2,6 +2,38 @@
 let persons = [];
 let salaries = [];
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to move cursor to the name field
+    function moveCursorToNameField() {
+        document.getElementById("name").focus();
+    }
+
+    // Move cursor to the name field when the application starts
+    moveCursorToNameField();
+
+    // Function to handle adding an employee
+    function addEmployee() {
+        // Get the values from the input fields
+        var name = document.getElementById("name").value;
+        var salary = document.getElementById("salary").value;
+
+        // Check if both name and salary are provided
+        if (name.trim() !== "" && salary.trim() !== "") {
+            // Clear the input fields
+            document.getElementById("name").value = "";
+            document.getElementById("salary").value = "";
+
+            // Move cursor to the name field after an employee is added
+            moveCursorToNameField();
+        } else {
+            alert("Please enter both name and salary.");
+        }
+    }
+
+    // Add event listener for the addEmployee button
+    document.getElementById("addEmployee").addEventListener("click", addEmployee);
+});
+
 // Function to add a person and salary to the arrays
 function addSalary() {
     let name = document.getElementById("name").value.trim();
@@ -107,3 +139,4 @@ function updateModifyDropdown() {
 window.onload = function() {
     document.getElementById("name").focus();
 };
+
