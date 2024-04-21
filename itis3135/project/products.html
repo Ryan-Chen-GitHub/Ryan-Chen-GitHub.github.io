@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vincente's Shoe Emporium</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <!-- Styles, which is usually in a CSS file-->
+  <style>      
+header {
+    background-color: #1e212b;
+    margin-top: -22px;
+    margin-left: -17px;
+    margin-right: -18px;
+    margin-bottom: -0px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+body {
+    font-size: 18px;
+    background-color: #6a7b76;
+    color: #E0F0F5;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    color: #FFDD4A;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FE9000;
+}
+
+main {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+figure {
+    text-align: center;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 700px) {
+    main { 
+        max-width: 1200px; 
+        width: 100%;
+        height: 100%;
+        margin: 0% auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    main { 
+        width: 90%; 
+        height: 100%;
+        margin: 0% auto;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    main { 
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+img {
+        width: 25%;
+        display: block;
+        margin: auto;
+}
+
+#collage-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+#collage-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #ffffff;
+}
+
+#prev-arrow {
+    left: 10px;
+}
+
+#next-arrow {
+    right: 10px;
+}
+
+figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #FFDD4A;
+}
+  </style>
+</head>
+<body>
+  <!-- Header, including navigation bar -->
+  <header>
+    <h1>Vincente's Shoe Emporium</h1>
+    <nav>
+        <a href="index.html">About Me</a>
+        ♫
+        <a href="schedule.html">Schedule</a>
+        ♫
+        <a href="products.html">Products</a>
+        ♫
+        <a href="faq.html">FAQ</a>
+        ♫
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <!-- Scripts to HTML include-->
+    <script src="scripts/HTMLInclude.js"></script>
+  </header>
+  <!-- Main, where the content is -->
+  <main>
+    <h2>Products</h2>
+    <div>
+        <img src="/images/shop.png" alt="calendar">
+    </div>
+    <p>
+        Welcome to our Products page! Here, we showcase some of the most popular shoes available for sale at Vincente's Shoe Emporium. From stylish sneakers to elegant heels, we offer a curated selection of footwear to suit various tastes and occasions. While you can explore our featured products here, our full catalog is available upon request. If you're interested in viewing our entire range of shoes or have specific preferences in mind, we invite you to send us an inquiry via the Contact Us page. Our team will be delighted to assist you in finding the perfect pair that meets your needs and style preferences.</p>
+    <div id="collage-container">
+        <img style="width: 350px" id="collage-img" src="/images/Shoes1.jpeg" alt="Shoes">
+        <figcaption>Military Black Jordans 4 (9.5-12)</figcaption>
+        <span id="prev-arrow" class="arrow" onclick="prevPhoto()">&#10094;</span>
+        <span id="next-arrow" class="arrow" onclick="nextPhoto()">&#10095;</span>
+    </div>
+  </main>
+  <!-- Footer, crediting ryanenterprise -->
+  <footer>
+    <p>Page Built by <a href="ryanenterprise.online/">Ryan Enterprise</a> &copy;2023</p>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.js"></script>
+  </footer>
+<script>
+    var currentPhotoIndex = 0;
+    var photos = ["/images/Shoes1.jpeg", "/images/Shoes2.png", "/images/Shoes3.png", "/images/Shoes4.png", "/images/Shoes5.png"]; // Add more photo URLs here
+    var captions = ["Military Black Jordans 4 (9.5-12)", "Supreme Air Jordans 5 (11)", "J Balvin Medellin Air Jordans 3 (11)", "Dunk Low Sb April (8)", "Jordan 4 Red Thunder (8.5, 10.5, 11.5)"]; // Add captions for each photo here
+    
+    function prevPhoto() {
+        currentPhotoIndex = (currentPhotoIndex - 1 + photos.length) % photos.length;
+        updatePhoto();
+    }
+    
+    function nextPhoto() {
+        currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+        updatePhoto();
+    }
+    
+    function updatePhoto() {
+        var img = document.getElementById("collage-img");
+        img.src = photos[currentPhotoIndex];
+    
+        var caption = document.querySelector("figcaption");
+        caption.textContent = captions[currentPhotoIndex];
+    }
+</script>
+</body>
+</html>

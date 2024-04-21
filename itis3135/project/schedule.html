@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta Data -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vincente's Shoe Emporium</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <!-- Styles, which is usually in a CSS file-->
+  <style>      
+header {
+    background-color: #1e212b;
+    margin-top: -22px;
+    margin-left: -17px;
+    margin-right: -18px;
+    margin-bottom: -0px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+body {
+    font-size: 18px;
+    background-color: #6a7b76;
+    color: #E0F0F5;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    color: #FFDD4A;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FE9000;
+}
+
+main {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+figure {
+    text-align: center;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 700px) {
+    main { 
+        max-width: 1200px; 
+        width: 100%;
+        height: 100%;
+        margin: 0% auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    main { 
+        width: 90%; 
+        height: 100%;
+        margin: 0% auto;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    main { 
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+img {
+        width: 25%;
+        display: block;
+        margin: auto;
+}
+    
+.calendar {
+    width: 300px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.open-day {
+    background-color: #3fea3f96;
+}
+
+.closed-day {
+    background-color: #eb313182;
+}
+
+.header {
+    background-color: rgba(74, 159, 234, 0.63);
+}
+  </style>
+</head>
+<body>
+  <!-- Header, including navigation bar -->
+  <header>
+    <h1>Vincente's Shoe Emporium</h1>
+    <nav>
+        <a href="index.html">About Me</a>
+        ♫
+        <a href="schedule.html">Schedule</a>
+        ♫
+        <a href="products.html">Products</a>
+        ♫
+        <a href="faq.html">FAQ</a>
+        ♫
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <!-- Scripts to HTML include-->
+    <script src="scripts/HTMLInclude.js"></script>
+  </header>
+  <!-- Main, where the content is -->
+  <main>
+    <h2>Schedule</h2>
+    <img src="/images/calendar.png" alt="calendar">
+    <p>Welcome to our Schedule page! Here, we aim to keep all our valued customers and clients informed about our company's operating hours and closures. At Vincente's Shoe Emporium, we are committed to providing exceptional service while ensuring transparency and convenience for all our stakeholders.</p> 
+    <p>Our business hours are as follows: Monday through Thursday, we are open from 9:00 AM to 5:00 PM, and on Fridays, we operate from 9:00 AM to 3:00 PM. Please note that we are closed on weekends (Saturday and Sunday) as well as on major holidays.</p>
+    <p>To help you plan your visits and interactions with us, we've created a visual calendar displaying our schedule. Please refer to the calendar below for an overview of our operating hours and closure</p>
+    <div>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th class="header">Day</th>
+                    <th class="header">Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="open-day">
+                    <td>Monday</td>
+                    <td>9:00 AM - 5:00 PM</td>
+                </tr>
+                <tr class="open-day">
+                    <td>Tuesday</td>
+                    <td>9:00 AM - 5:00 PM</td>
+                </tr>
+                <tr class="open-day">
+                    <td>Wednesday</td>
+                    <td>9:00 AM - 5:00 PM</td>
+                </tr>
+                <tr class="open-day">
+                    <td>Thursday</td>
+                    <td>9:00 AM - 5:00 PM</td>
+                </tr>
+                <tr class="open-day">
+                    <td>Friday</td>
+                    <td>9:00 AM - 3:00 PM</td>
+                </tr>
+                <tr class="closed-day">
+                    <td>Saturday</td>
+                    <td>Closed</td>
+                </tr>
+                <tr class="closed-day">
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </main>
+  <!-- Footer, crediting ryanenterprise -->
+  <footer>
+    <p>Page Built by <a href="ryanenterprise.online/">Ryan Enterprise</a> &copy;2023</p>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.js"></script>
+  </footer>
+</body>
+</html>
