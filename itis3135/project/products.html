@@ -146,17 +146,18 @@ figcaption {
   <!-- Main, where the content is -->
   <main>
     <h2>Products</h2>
-    <div>
-        <img src="/images/shop.png" alt="calendar">
-    </div>
-    <p>
-        Welcome to our Products page! Here, we showcase some of the most popular shoes available for sale at Vincente's Shoe Emporium. From stylish sneakers to elegant heels, we offer a curated selection of footwear to suit various tastes and occasions. While you can explore our featured products here, our full catalog is available upon request. If you're interested in viewing our entire range of shoes or have specific preferences in mind, we invite you to send us an inquiry via the Contact Us page. Our team will be delighted to assist you in finding the perfect pair that meets your needs and style preferences.</p>
-    <div id="collage-container">
-        <img style="width: 350px" id="collage-img" src="/images/Shoes1.jpeg" alt="Shoes">
-        <figcaption>Military Black Jordans 4 (9.5-12)</figcaption>
-        <span id="prev-arrow" class="arrow" onclick="prevPhoto()">&#10094;</span>
-        <span id="next-arrow" class="arrow" onclick="nextPhoto()">&#10095;</span>
-    </div>
+    <figure>
+        <img src="../images/shop.png" alt="shop">
+    </figure>
+    <p>Welcome to our Products page! Here, we showcase some of the most popular shoes available for sale at Vincente's Shoe Emporium. From stylish sneakers to elegant heels, we offer a curated selection of footwear to suit various tastes and occasions. While you can explore our featured products here, our full catalog is available upon request. If you're interested in viewing our entire range of shoes or have specific preferences in mind, we invite you to send us an inquiry via the Contact Us page. Our team will be delighted to assist you in finding the perfect pair that meets your needs and style preferences.</p>
+    <figure>
+        <div id="collage-container">
+            <img style="width: 350px" id="collage-img" src="../images/Shoes1.jpeg" alt="Shoes">
+            <figcaption>Military Black Jordans 4 (9.5-12)</figcaption>
+            <span id="prev-arrow" class="arrow" onclick="prevPhoto()">&#10094;</span>
+            <span id="next-arrow" class="arrow" onclick="nextPhoto()">&#10095;</span>
+        </div>
+    </figure>
   </main>
   <!-- Footer, crediting ryanenterprise -->
   <footer>
@@ -166,7 +167,7 @@ figcaption {
   </footer>
 <script>
     var currentPhotoIndex = 0;
-    var photos = ["/images/Shoes1.jpeg", "/images/Shoes2.png", "/images/Shoes3.png", "/images/Shoes4.png", "/images/Shoes5.png"]; // Add more photo URLs here
+    var photos = ["../images/Shoes1.jpeg", "../images/Shoes2.png", "../images/Shoes3.png", "../images/Shoes4.png", "../images/Shoes5.png"]; // Add more photo URLs here
     var captions = ["Military Black Jordans 4 (9.5-12)", "Supreme Air Jordans 5 (11)", "J Balvin Medellin Air Jordans 3 (11)", "Dunk Low Sb April (8)", "Jordan 4 Red Thunder (8.5, 10.5, 11.5)"]; // Add captions for each photo here
     
     function prevPhoto() {
