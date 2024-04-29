@@ -87,6 +87,11 @@ img {
         margin: auto;
 }
 
+b > p:hover {
+    cursor: pointer;
+    color: #ce65ff; /* Change color on hover */
+}
+
   </style>
 </head>
 <body>
@@ -132,11 +137,31 @@ img {
       <p>At Vincente's Shoe Emporium, we understand the importance of proper fit for both comfort and style. That's why we offer personalized shoe fitting services to ensure you find the perfect pair that not only looks great but feels great too. Our knowledgeable staff will assist you in finding the right size and width for your feet, taking into account factors such as arch support and foot shape to ensure optimal comfort and support.</p>
     </div>
   </main>
-  <!-- Footer, crediting ryanenterprise -->
   <footer>
     <p>Page Built by <a href="ryanenterprise.online/">Ryan Enterprise</a> &copy;2023</p>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.js"></script>
   </footer>
+  <script>
+    // JavaScript code for FAQ section
+    document.addEventListener("DOMContentLoaded", function() {
+    // Get all the question elements
+    var questions = document.querySelectorAll('b > p');
+
+    // Add click event listener to each question
+    questions.forEach(function(question) {
+        question.addEventListener('click', function() {
+            // Show an alert message
+            alert("If you would like to know more about this question, please head over to the Contact Us page.");
+
+            // Toggle highlighting effect
+            questions.forEach(function(q) {
+                q.style.color = ''; // Remove highlighting from all questions
+            });
+            question.style.color = '#8D99AE'; // Restore default color to clicked question
+        });
+    });
+});
+  </script>
 </body>
 </html>

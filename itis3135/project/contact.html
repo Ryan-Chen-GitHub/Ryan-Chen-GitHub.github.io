@@ -171,11 +171,32 @@ label {
         <input type="reset" value="Reset">
     </form>
   </main>
-  <!-- Footer, crediting ryanenterprise -->
   <footer>
     <p>Page Built by <a href="ryanenterprise.online/">Ryan Enterprise</a> &copy;2023</p>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.js"></script>
   </footer>
+  <script>
+    document.getElementById("contactForm").onsubmit = function(event) {
+      event.preventDefault(); // Prevent form submission
+      // Get form input values
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var query = document.getElementById("query").value;
+
+      // Create HTML to display entered information
+      var infoHTML = "<h2>Here is your submission:</h2>"
+      infoHTML += "<p>First Name: " + firstName + "</p>";
+      infoHTML += "<p>Last Name: " + lastName + "</p>";
+      infoHTML += "<p>Email: " + email + "</p>";
+      infoHTML += "<p>Phone Number: " + phone + "</p>";
+      infoHTML += "<p>Query: " + query + "</p>";
+
+      // Display entered information on the page
+      document.getElementById("contactForm").innerHTML = infoHTML;
+    };
+  </script>
 </body>
 </html>
