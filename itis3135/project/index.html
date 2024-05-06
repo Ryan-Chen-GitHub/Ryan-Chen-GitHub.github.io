@@ -6,104 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vincente's Shoe Emporium</title>
   <!-- Styles, which is usually in a CSS file-->
-  <style>      
-header {
-    background-color: #160C28;
-    margin-top: -22px;
-    margin-left: -17px;
-    margin-right: -18px;
-    margin-bottom: -0px;
-    padding-top: 20px;
-    padding-left: 10px;
-    padding-right: 20px;
-    padding-bottom: 30px;
-}
-
-body {
-    font-size: 18px;
-    background-color: #1D1128;
-    color: #8D99AE;
-    text-align: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-a {
-    color: #E5D4ED;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #b34de3;
-}
-
-main {
-    text-align: left;
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-h2 {
-    text-align: center;
-}
-
-img {
-    width: 100%;
-}
-
-figure {
-    text-align: center;
-    font-style: italic;
-}
-
-@media only screen and (max-width: 700px) {
-    main { 
-        max-width: 1200px; 
-        width: 100%;
-        height: 100%;
-        margin: 0% auto;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    main { 
-        width: 90%; 
-        height: 100%;
-        margin: 0% auto;
-    }
-}
-
-@media only screen and (max-width: 300px) {
-    main { 
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-    }
-}
-
-img {
-        width: 25%;
-        display: block;
-        margin: auto;
-}
-  </style>
+  <link rel="stylesheet" href="../styles/project_default.css">
 </head>
 <body>
   <!-- Header, including navigation bar -->
-  <header>
-    <h1>Vincente's Shoe Emporium</h1>
-    <nav>
-        <a href="index.html">About Me</a>
-        ♫
-        <a href="schedule.html">Schedule</a>
-        ♫
-        <a href="products.html">Products</a>
-        ♫
-        <a href="faq.html">FAQ</a>
-        ♫
-        <a href="contact.html">Contact Us</a>
-    </nav>
-    <!-- Scripts to HTML include-->
-    <script src="scripts/HTMLInclude.js"></script>
+  <header> 
+    <div data-include="../components/project_header.html"></div>
   </header>
   <!-- Main, where the content is -->
   <main>
@@ -126,14 +34,8 @@ img {
     
   <!-- Footer, crediting ryanenterprise -->
   <footer>
-    <div data-include="components/footer.html"></div>
-    <script src="scripts/HTMLInclude.js"></script>
-    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
-      <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-  </a>
-  <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
-      <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
-  </a>
+    <div data-include="../components/project_footer.html"></div>
+    <script src="../scripts/HTMLInclude.js"></script>
   </footer>
 </body>
 </html>
